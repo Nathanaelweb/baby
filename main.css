@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #facaeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease-out;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    background: #ff99cc;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    animation: slideUp 1s ease-out;
+}
+
+.message-box h2 {
+    font-size: 24px;
+    color: #d5006d;
+    margin-bottom: 15px;
+}
+
+.message-box p {
+    font-size: 18px;
+    color: #ff66b2;
+}
+
+.password-display {
+    font-size: 20px;
+    color: #ff0066;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.keyboard {
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.key {
+    background-color: #ff66b2;
+    border: none;
+    padding: 20px;
+    font-size: 24px;
+    margin: 5px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.key:hover {
+    transform: scale(1.1);
+}
+
+.key:active {
+    background-color: #e60073;
+}
+
+.response {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff0066;
+    font-weight: bold;
+}
+
+/* Apology Section */
+.apology-section {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.apology-message {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #d5006d;
+    animation: slideUp 3s ease-out;
+    font-weight: bold;
+    font-family: cursive;
+    box-shadow: 0px 0px 10px rgb(241, 103, 126);
+}
+
+/* Gallery Container */
+/* Gallery Container */
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    height: 200px;
+    overflow: hidden;
+    background: rgba(255, 182, 193, 0.1); /* Light pink background */
+    border-radius: 15px;
+}
+
+/* Individual Images */
+.gallery img {
+    width: 50px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 3px rgba(255, 105, 180, 0.8);
+    position: relative;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    z-index: 1;
+    
+}
+
+/* Hover Effect: Bring Image to Front */
+.gallery img:hover {
+    transform: scale(2);
+    z-index: 15;
+}
+
+/* Sprinkle Lights */
+.sprinkle-light {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(235, 110, 129, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(255, 0, 38, 0.9);
+    z-index: 20; /* Higher than images */
+    opacity: 0.8;
+    animation: moveAround 5s infinite alternate ease-in-out;
+}
+
+/* Move Sprinkles to All Four Ends */
+@keyframes moveAround {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    25% {
+        left: 100%;
+        top: 0;
+    }
+    50% {
+        left: 100%;
+        top: 100%;
+    }
+    75% {
+        left: 0;
+        top: 100%;
+    }
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+
+
+
+
+
+
+/* Rotating shadow animation */
+@keyframes rotateShadow {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg) scale(-1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
